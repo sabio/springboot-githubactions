@@ -23,6 +23,6 @@ public class CalculatorServiceTest {
 
     @Test
     public void testSuma() {
-        assertEquals(calculatorService.suma(2,3), 4);
+        assertEquals(calculatorService.suma(2,2), 4);
     }
 }
