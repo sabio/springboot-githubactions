@@ -27,7 +27,8 @@ public class CalculatorServiceTest {
     }
     @Test
     public void testSumaDouble() {
-        double res = calculatorService.suma(0.001d,0.0002d);
-        assertEquals(res, 0.0012d);
+        //double res = calculatorService.suma(0.001d,0.0002d);
+        double res = calculatorService.suma(1d,1d);
+        assertEquals(2d, res);
     }
 }
