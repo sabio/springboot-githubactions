@@ -22,7 +22,12 @@ public class CalculatorServiceTest {
     }
 
     @Test
-    public void testSuma() {
+    public void testSumaInt() {
         assertEquals(calculatorService.suma(2,2), 4);
+    }
+    @Test
+    public void testSumaDouble() {
+        double res = calculatorService.suma(0.001d,0.0002d);
+        assertEquals(res, 0.0012d);
     }
 }
