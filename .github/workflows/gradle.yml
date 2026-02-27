@@ -14,7 +14,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build this stuff:
 
     runs-on: ubuntu-latest
     permissions:
@@ -41,6 +41,12 @@ jobs:
 
     - name: Run tests
       run: ./gradlew test
+
+    - name: Create Docker image
+      run: docker build -t myapp:1.0 .
+
+    - name: Check that docker image exists
+      run: docker image ls
 
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
@@ -75,8 +81,3 @@ jobs:
     - name: Generate and submit dependency graph
       uses: gradle/actions/dependency-submission@v5
 
-    - name: Creates JAR
-      run: |
-        ./gradlew build
-        cd build/libs
-        ls -la
