@@ -5,5 +5,5 @@ jobs:
   jugando:
     runs-on: ubuntu-latest
     steps:
-      -name: step 1
-      run: echo "HOLA MUNDO!!"
+      - name: step 1
+        run: echo "HOLA MUNDO!!"
