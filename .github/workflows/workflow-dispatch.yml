@@ -1,9 +1,14 @@
 name: Jugando con workflow dispatch
 on:
   workflow_dispatch:
+    inputs:
+      nombre:
+        description: "Nombre"
+        required: true
+        type: string
 jobs:
   jugando:
     runs-on: ubuntu-latest
     steps:
       - name: step 1
-        run: echo "HOLA MUNDO!!"
+        run: echo "HOLA ${{ inputs.nombre }}"
