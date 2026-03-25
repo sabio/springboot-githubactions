@@ -4,15 +4,12 @@ import com.springboot_githubactions.springboot_githubactions.dto.Person;
 import com.springboot_githubactions.springboot_githubactions.service.CalculatorService;
 import lombok.AllArgsConstructor;
 import org.json.JSONArray;
-import org.json.JSONObject;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.time.OffsetDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -63,7 +60,7 @@ public class HelloController {
     }
 
     @ExceptionHandler({Exception.class})
-    public String databaseError(Exception ex) {
+    public String anError(Exception ex) {
         ex.printStackTrace();
         return "error";
     }
