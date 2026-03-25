@@ -50,6 +50,11 @@ public class HelloController {
         return new Person(1, "Armando");
     }
 
+    @GetMapping("/caliz")
+    public String caliz() {
+        return "Caliz";
+    }
+
     @GetMapping("/people")
     public List<Person> persons() throws IOException {
         /*
