@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app:
+    # Build image using the repository Dockerfile (named `dockerfile` in project root)
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: springboot-githubactions:latest
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    # If you need to pass JVM options or environment variables, add them here:
+    # environment:
+    #   - JAVA_OPTS=-Xms256m -Xmx512m
+
+# NOTE:
+# - This compose file expects the application JAR to exist at the path
+#   `build/libs/springboot-githubactions-0.0.1-SNAPSHOT.jar` because the
+#   project's Dockerfile copies that file into the image. Run a build first:
+#     .\gradlew build
+# - Then start with:
+#     docker compose up --build
+

@@ -17,8 +17,8 @@ env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: calando/myrepo
   ECS_TASK_DEFINITION: my-task-definition
-  CONTAINER_NAME: container-name
-  ECS_SERVICE: ecs-service
+  CONTAINER_NAME: the-container-name
+  ECS_SERVICE: the-ecs-service
   ECS_CLUSTER: my-ecs-cluster
 
 jobs:
